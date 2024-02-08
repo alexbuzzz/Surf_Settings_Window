@@ -11,6 +11,9 @@
                 Width="207" Height="28"
                 HorizontalAlignment="Center" VerticalAlignment="Center"
                 BorderThickness="0">
+            <Button.Effect>
+                <DropShadowEffect ShadowDepth="2" Direction="320" Color="Black" Opacity="0.15" BlurRadius="10"/>
+            </Button.Effect>
             <Button.Background>
                 <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
                     <GradientStop Offset="0" Color="#3C4044"/>
