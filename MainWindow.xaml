@@ -5,9 +5,32 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Surf_Settings_Window.CustomControls"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800"
-        Background="#26292F">
-    <Grid>
-        <local:Button1 ButtonText="My Custom Text" />
-    </Grid>
+        Title="MainWindow" Height="450" Width="800" WindowStartupLocation="CenterScreen" WindowStyle="None" AllowsTransparency="True" Background="Transparent">
+    <Border Background="#26292F" CornerRadius="30">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <local:Button1 ButtonText="Сбросить по умолчанию"
+               IconKind="ArrowLeftTop"
+               ShowIcon="True"
+               ButtonWidth="230"
+               ButtonHeight="28"
+               Grid.Row="0"
+                Margin="0,0,0,20" />
+
+            <local:ComboBox Grid.Row="1"
+                ComboBoxWidth="200"
+                ComboBoxHeight="42">
+                <local:ComboBox.ItemsSource>
+                    <ComboBoxItem Content="Item1" />
+                    <ComboBoxItem Content="Item2" />
+                </local:ComboBox.ItemsSource>
+
+            </local:ComboBox>
+
+        </Grid>
+    </Border>
 </Window>

@@ -1,0 +1,78 @@
+﻿<Window x:Class="Surf_Settings_Window.MainSettings"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Surf_Settings_Window.CustomControls"
+        xmlns:materialIcons="clr-namespace:Material.Icons.WPF;assembly=Material.Icons.WPF"
+        mc:Ignorable="d"
+        Title="MainSettings"
+        Height="801"
+        Width="730"
+        WindowStartupLocation="CenterScreen"
+        WindowStyle="None"
+        AllowsTransparency="True"
+        Background="Transparent">
+    <Border Background="#26292F" CornerRadius="16" Padding="3">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="200" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+    
+            <Grid Grid.Column="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <!--Title-->
+                <TextBlock Grid.Row="0"
+                           Text="Настройки"
+                           VerticalAlignment="Center"
+                           HorizontalAlignment="Left"
+                           Margin="8,0,0,0"/>
+            </Grid>
+
+            <!--Left Menu-->
+            <StackPanel  Grid.Column="0"  VerticalAlignment="Top" Margin="0,50,0,0" HorizontalAlignment="Stretch">
+                    
+
+                <DockPanel>
+                    <TextBlock Text="Общие" VerticalAlignment="Center" />
+                    <materialIcons:MaterialIcon Kind="AccountCogOutline"
+                        HorizontalAlignment="Right"
+                        VerticalAlignment="Center"
+                        Width="20"
+                        Height="20"
+                        Foreground="White"/>
+                </DockPanel>
+
+                <DockPanel>
+                    <TextBlock Text="Подключения" VerticalAlignment="Center" />
+                    <materialIcons:MaterialIcon Kind="AccessPoint"
+                        HorizontalAlignment="Right"
+                        VerticalAlignment="Center"
+                        Width="20"
+                        Height="20"
+                        Foreground="White"/>
+                </DockPanel>
+
+
+            </StackPanel>
+
+
+            <!-- Border on the right side of the column -->
+            <Border Grid.Column="0" Grid.RowSpan="2" Width="1" VerticalAlignment="Stretch" HorizontalAlignment="Right">
+                <Border.Background>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                        <GradientStop Offset="0" Color="#26292F"/>
+                        <GradientStop Offset="0.5" Color="#35383D"/>
+                        <GradientStop Offset="1" Color="#26292F"/>
+                    </LinearGradientBrush>
+                </Border.Background>
+            </Border>
+
+        </Grid>
+    </Border>
+</Window>
